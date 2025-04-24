@@ -27,8 +27,10 @@
                         @enderror
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Update Permission</button>
-                    <a href="{{ route('permissions.index') }}" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-success">
+                        <i class="ti ti-pencil"></i> Update Permission
+                    </button>                    
+                    <a href="{{ route('permissions.index') }}" class="btn btn-outline-secondary">Cancel</a>
                 </form>
             </div>
         </div>

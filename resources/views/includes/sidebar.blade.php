@@ -18,10 +18,10 @@
                 </li>
                 @canany(['view permissions', 'view users', 'view roles'])
 
-                <li class="pc-item pc-caption">
-                    <label>System</label>
-                    <i class="ti ti-dashboard"></i>
-                </li>
+                    <li class="pc-item pc-caption">
+                        <label>System</label>
+                        <i class="ti ti-dashboard"></i>
+                    </li>
                     <li class="pc-item pc-hasmenu">
                         <a href="javascript:void(0);" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-typography"></i></span>
@@ -29,21 +29,30 @@
                             <span class="pc-arrow"><i class="ti ti-chevron-right"></i></span>
                         </a>
                         <ul class="pc-submenu">
-                            @can('view permissions')
-                                <li class="pc-item">
-                                    <a href="{{ route('permissions.index') }}" class="pc-link">Permissions</a>
-                                </li>
-                            @endcan
-
                             @can('view users')
                                 <li class="pc-item">
-                                    <a href="{{ route('users.index') }}" class="pc-link">User Management</a>
+                                    <a href="{{ route('users.index') }}" class="pc-link">
+                                        <span class="pc-micon"><i class="ti ti-users"></i></span>
+                                        <span class="pc-mtext">User Management</span>
+                                    </a>
+                                </li>
+                            @endcan
+                            
+                            @can('view permissions')
+                                <li class="pc-item">
+                                    <a href="{{ route('permissions.index') }}" class="pc-link">
+                                        <span class="pc-micon"><i class="ti ti-lock"></i></span>
+                                        <span class="pc-mtext">Permissions</span>
+                                    </a>
                                 </li>
                             @endcan
 
                             @can('view roles')
                                 <li class="pc-item">
-                                    <a href="{{ route('roles.index') }}" class="pc-link">Role Management</a>
+                                    <a href="{{ route('roles.index') }}" class="pc-link">
+                                        <span class="pc-micon"><i class="ti ti-shield"></i></span>
+                                        <span class="pc-mtext">Role Management</span>
+                                    </a>
                                 </li>
                             @endcan
                         </ul>
@@ -51,7 +60,7 @@
                 @endcanany
 
 
-                <li class="pc-item pc-caption">
+                {{-- <li class="pc-item pc-caption">
                     <label>Pages</label>
                     <i class="ti ti-news"></i>
                 </li>
@@ -124,16 +133,17 @@
                         <span class="pc-mtext">Sample Page</span>
                     </a>
                 </li>
-            </ul>
+            </ul> --}}
 
-            {{-- <div class="card text-center">
-                <div class="card-body">
-                    <img src="{{ asset('admin_assets/images/img-navbar-card.png') }}" alt="images" class="img-fluid mb-2">
-                    <h5>Upgrade To Pro</h5>
-                    <p>To get more features and components</p>
-                    <a href="https://codedthemes.com/item/berry-bootstrap-5-admin-template/" target="_blank" class="btn btn-success">Buy Now</a>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="{{ asset('admin_assets/images/img-navbar-card.png') }}" alt="images"
+                            class="img-fluid mb-2">
+                        <h5>Template Made by</h5>
+                        <p>Jackdev🧡</p>
+                        {{-- <a href="https://codedthemes.com/item/berry-bootstrap-5-admin-template/" target="_blank" class="btn btn-success">Buy Now</a> --}}
+                    </div>
                 </div>
-            </div> --}}
         </div>
     </div>
 </nav>

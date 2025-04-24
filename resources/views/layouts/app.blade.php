@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<href lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -9,35 +9,28 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- [Favicon] icon -->
+    <!-- [Favicon] -->
     <link rel="icon" href="{{ asset('admin_assets/images/favicon.svg') }}" type="image/x-icon">
 
-    <!-- [Google Font] Family -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
-          id="main-font-link">
-
-    <!-- [Tabler Icons] https://tablericons.com -->
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" id="main-font-link">
     <link rel="stylesheet" href="{{ asset('admin_assets/fonts/tabler-icons.min.css') }}">
-
-    <!-- [Feather Icons] https://feathericons.com -->
     <link rel="stylesheet" href="{{ asset('admin_assets/fonts/feather.css') }}">
-
-    <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
     <link rel="stylesheet" href="{{ asset('admin_assets/fonts/fontawesome.css') }}">
-
-    <!-- [Material Icons] https://fonts.google.com/icons -->
     <link rel="stylesheet" href="{{ asset('admin_assets/fonts/material.css') }}">
 
-    <!-- [Template CSS Files] -->
+    <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('admin_assets/css/style.css') }}" id="main-style-link">
     <link rel="stylesheet" href="{{ asset('admin_assets/css/style-preset.css') }}">
 
+    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    {{-- Styles pushed from child views --}}
+    @stack('styles')
 </head>
 
 <body data-pc-preset="preset-1" data-pc-direction="ltr" data-pc-theme="light">
-    
     <!-- Pre-loader -->
     <div class="loader-bg">
         <div class="loader-track">
@@ -61,12 +54,10 @@
     <!-- Footer -->
     @include('includes.footer')
 
-    <!-- [Page Specific JS] start -->
+    <!-- Page Specific JS -->
     <script src="{{ asset('admin_assets/js/plugins/apexcharts.min.js') }}"></script>
-    {{-- <script src="{{ asset('admin_assets/js/pages/dashboard-default.js') }}"></script> --}}
-    <!-- [Page Specific JS] end -->
 
-    <!-- Required Js -->
+    <!-- Required JS -->
     <script src="{{ asset('admin_assets/js/plugins/popper.min.js') }}"></script>
     <script src="{{ asset('admin_assets/js/plugins/simplebar.min.js') }}"></script>
     <script src="{{ asset('admin_assets/js/plugins/bootstrap.min.js') }}"></script>
@@ -74,6 +65,7 @@
     <script src="{{ asset('admin_assets/js/pcoded.js') }}"></script>
     <script src="{{ asset('admin_assets/js/plugins/feather.min.js') }}"></script>
 
+    {{-- Scripts pushed from child views --}}
+    @stack('scripts')
 </body>
-
-</href>
+</html>

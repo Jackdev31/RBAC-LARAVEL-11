@@ -32,7 +32,7 @@
                         @endforeach
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Create Role</button>
+                    <button type="submit" class="btn btn-primary"><i class="ti ti-shield"></i> Create Role</button>
                 </form>
             </div>
         </div>

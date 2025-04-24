@@ -32,7 +32,7 @@
                         <input type="text" class="form-control" name="name" id="name" required
                             placeholder="Enter permission name">
                     </div>
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button type="submit" class="btn btn-primary"><i class="ti ti-lock"></i> Create Permission</button>
                 </form>
 
             </div>

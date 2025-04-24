@@ -55,7 +55,9 @@
                         @endforeach
                     </div>
 
-                    <button type="submit" class="btn btn-success">Update User</button>
+                    <button type="submit" class="btn btn-success">
+                        <i class="ti ti-pencil"></i> Update User
+                    </button>
                     <a href="{{ route('users.index') }}" class="btn btn-outline-secondary">Cancel</a>
                 </form>
             </div>

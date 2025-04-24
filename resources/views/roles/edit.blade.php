@@ -38,7 +38,10 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-warning">Update Role</button>
+                    <button type="submit" class="btn btn-success">
+                        <i class="ti ti-pencil"></i> Update Role
+                    </button>
+                    <a href="{{ route('roles.index') }}" class="btn btn-outline-secondary">Cancel</a>
                 </form>
             </div>
         </div>
